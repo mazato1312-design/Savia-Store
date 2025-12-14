@@ -138,7 +138,7 @@ async def buy(ctx, product_id: str):
 
 return
 
-    product = stock_cache[product_id]
+product = stock_cache[product_id]
     
     # 2. เช็คสต็อก
     if product['stock'] <= 0:
@@ -174,6 +174,7 @@ return
 # รันบอท
 server_on()
     bot.run(os.getenv('TOKEN'))
+
 
 
 
