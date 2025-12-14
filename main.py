@@ -963,7 +963,7 @@ def redeem_truemoney_voucher(mobile, voucher_hash):
         
         # สร้าง session ใหม่สำหรับแต่ละการเรียก
         session_id = 'PHPSESSID=' + ''.join(random.choices('0123456789abcdef', k=32))
-        csrf_token = ''.join(random.choices('0123456789abcdef', k=64))
+        csrf_TOKEN = ''.join(random.choices('0123456789abcdef', k=64))
         
         headers = {
             'Accept': 'application/json, text/plain, */*',
@@ -984,13 +984,13 @@ def redeem_truemoney_voucher(mobile, voucher_hash):
             'User-Agent': ua,
             'X-Requested-With': 'XMLHttpRequest',
             'Cookie': session_id,
-            'X-CSRF-TOKEN': csrf_token
+            'X-CSRF-TOKEN': csrf_TOKEN
         }
         
         post_data = json.dumps({
             'mobile': mobile,
             'voucher_hash': voucher_hash,
-            '_token': csrf_token
+            '_TOKEN': csrf_TOKEN
         })
         
         try:
@@ -1225,3 +1225,4 @@ if __name__ == "__main__":
 
 
     bot.run(os.getenv('TOKEN'))
+
