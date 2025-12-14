@@ -1,3 +1,4 @@
+import os
 import discord
 from discord.ext import commands
 import asyncio
@@ -9,7 +10,6 @@ import random
 from datetime import datetime
 import urllib3
 import sqlite3
-import os
 from myserver import server_on
 
 # ปิด warning SSL
@@ -1222,5 +1222,6 @@ if __name__ == "__main__":
     print("กำลังเริ่มต้นระบบเติมเงินอัตโนมัติ...")
 
     server_on()
+
 
     bot.run(os.getenv('TOKEN'))
