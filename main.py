@@ -17,8 +17,8 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # ค่าคงที่
 
-ADMIN_CHANNEL_ID = 1438091015948075008  # ห้องหลังบ้าน
-MAIN_CHANNEL_ID = 1438037309265154119   # ห้องหน้าเติมเงิน
+ADMIN_CHANNEL_ID = 1448339573938720808  # ห้องหลังบ้าน
+MAIN_CHANNEL_ID = 1448340407942647828   # ห้องหน้าเติมเงิน
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -1225,4 +1225,5 @@ if __name__ == "__main__":
 
 
     bot.run(os.getenv('TOKEN'))
+
 
