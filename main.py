@@ -136,7 +136,6 @@ async def buy(ctx, product_id: str):
     if product_id not in stock_cache:
         await ctx.send("❌ ไม่พบสินค้านี้")
 
-Novelty, [12/14/2025 6:08 PM]
 return
 
     product = stock_cache[product_id]
@@ -178,6 +177,7 @@ bot.run(TOKEN)
 
 
     bot.run(os.getenv('TOKEN'))
+
 
 
 
