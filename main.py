@@ -19,8 +19,7 @@ import datetime
 TOKEN = 'YOUR_DISCORD_BOT_TOKEN'
 WEB_API_URL = 'https://your-website.com/api' # URL เว็บของคุณ
 WEB_API_KEY = 'YOUR_API_KEY'
-ADMIN_CHANNEL_ID = 1448340407942647828  # ห้องหลังบ้าน
-MAIN_CHANNEL_ID = 1448339573938720808   # ห้องหน้าเติมเงิน
+ADMIN_ID = 123456789012345678 # ID ของคุณสำหรับแจ้งเตือน
 
 # ตั้งค่า Intents
 intents = discord.Intents.default()
@@ -136,6 +135,7 @@ async def buy(ctx, product_id: str):
     if product_id not in stock_cache:
         await ctx.send("❌ ไม่พบสินค้านี้")
 
+
 return
 
     product = stock_cache[product_id]
@@ -172,11 +172,9 @@ return
         users_db[user_id] += product['price']
 
 # รันบอท
-bot.run(TOKEN)
-    server_on()
-
-
+server_on()
     bot.run(os.getenv('TOKEN'))
+
 
 
 
